@@ -18,12 +18,14 @@
 <body>
   <h1>+</h1>
 
-  <p id="loading">많은 분들이 참여해주신 덕분에 무사히 데이터 수집 종료되었습니다! 관심을 가져 주셔서 정말 감사합니다.<br>모쪼록 평안한 하루가 되시기를 바라겠습니다!</p>
+  <p id="loading">CSV 로딩 중...</p>
 
   <section id="startArea" class="hidden">
-    <p>많은 분들이 참여해주신 덕분에 무사히 데이터 수집 종료되었습니다! 관심을 가져 주셔서 정말 감사합니다.<br>모쪼록 평안한 하루가 되시기를 바라겠습니다!</p>
+    <p>이것은 일본어 음성 지각을 확인하는 실험입니다. <br>조용한 환경에서 반드시 헤드폰을 착용하고 진행해 주세요.<br>또, 소리가 확실하게 들릴 만큼 볼륨을 키워 주세요.<br>
+      〜です라는 소리를 주의깊게 듣고 'トーです'로 들리는지 'トです'로 들리는지 클릭하여 응답하시면 됩니다.<br>애매하다고 생각되는 경우에도 더 가깝다고 느껴지는 발음을 골라 주셔야 합니다.<br>너무 깊게 생각하지 말고 선택해 주세요.<br>
+      <br>준비되셨다면 <strong>Start</strong>를 누르세요.</p>
+    <button id="startBtn" disabled>Start</button>
   </section>
-
 
   <section id="phaseArea" class="hidden">
     <p id="phaseMsg"></p>
@@ -38,7 +40,7 @@
 
   <section id="finishArea" class="hidden">
     <h2>실험이 종료되었습니다!</h2>
-    <p>참여해 주셔서 정말 감사합니다.<br>아래 버튼을 눌러 결과 파일을 저장한 뒤, minnkim@snu.ac.kr 또는 제 카카오톡을 통해 보내 주시면 감사하겠습니다.<br>제 종강에 도움을 주셔서 너무너무 감사합니다...!! 행복하세요!</p>
+    <p>참여해 주셔서 정말 감사합니다.<br>아래 버튼을 눌러 결과 파일을 저장한 뒤, minnkim@snu.ac.kr 또는 제 카카오톡을 통해 보내 주시면 감사하겠습니다.<br>행복하세요!</p>
     <button id="downloadBtn">Download results.csv</button>
   </section>
 
@@ -56,7 +58,7 @@ const SOUND_BEEP = 'beep.mp3';
 
   // 반복 횟수
   const PRE_REPS   = 3;
-  const TRAIN_REPS = 15;
+  const TRAIN_REPS = 10;
   const POST_REPS  = 3;
 
   /* ===== STATE ===== */
